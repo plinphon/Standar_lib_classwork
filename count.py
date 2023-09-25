@@ -1,8 +1,4 @@
-def most_frequent_item_count(collection):
-    most = 0
-    if len(collection) != 0:
-        for i in collection:
-            x = collection.count(i)
-            if x> most:
-                most = x
-    return most
+from collections import Counter
+
+def most_frequent_item_count(ints):
+    return 0 if not ints else Counter(ints).most_common(1)[0][1]
